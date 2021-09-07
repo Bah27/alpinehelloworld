@@ -1,5 +1,5 @@
 pipeline {
-    environnement {
+    environment {
         IMAGE_NAME = "alpinehelloworld"
         IMAGE_TAG = "latest"
         STAGING = "manma27-staging"
@@ -81,10 +81,9 @@ pipeline {
                heroku create $PRODUCTION || echo "projets already exist"
                heroku container:push -a $PRODUCTION web
                heroku container:release -a $PRODUCTION web
-            '''   
+            '''
           }
        }
      }
   }
 }
-
