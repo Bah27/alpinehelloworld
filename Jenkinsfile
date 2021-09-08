@@ -14,7 +14,7 @@ pipeline {
            agent any
            steps {
               script {
-                sh 'docker build -t eazytraining/$IMAGE_NAME:$IMAGE_TAG .'
+                sh 'docker build -t manma27/$IMAGE_NAME:$IMAGE_TAG .'
               }
            }
        }
